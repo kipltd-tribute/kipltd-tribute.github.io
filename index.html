@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KIP — Kelowna Industrial Plastics Ltd. | A Tribute</title>
+<meta name="description" content="A tribute to Kelowna Industrial Plastics (KIP) — the Kelowna, BC fiberglass shop that built hoods for Western Star trucks and so much more.">
+<style>
+  :root{
+    /* Palette recovered from the archived kipltd.com (2004–2006 design) */
+    --green:#006A53; --green2:#157F68; --cream:#FFEDC1; --salmon:#E17147;
+    --ink:#1f2a26; --muted:#5c6b64; --card:#fffdf6; --line:#e6d6ae;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);
+    font-family:Georgia,'Times New Roman',serif;line-height:1.65;font-size:17px}
+  header.site{position:sticky;top:0;z-index:10;background:var(--green);color:#fff;
+    display:flex;align-items:center;gap:1rem;padding:.5rem 1.25rem}
+  header.site .brand{display:flex;align-items:center;gap:.6rem;font-size:1.05rem;
+    letter-spacing:.05em;font-weight:bold;white-space:nowrap}
+  header.site .brand img{height:2rem;background:#fff;border-radius:.25rem;padding:.1rem .35rem}
+  header.site .brand small{font-weight:normal;color:#d8e8e0;font-size:.75rem}
+  nav{margin-left:auto;display:flex;gap:1rem;flex-wrap:wrap}
+  nav a{color:#fff;text-decoration:none;font-family:Verdana,Arial,sans-serif;
+    font-size:.76rem;letter-spacing:.08em;text-transform:uppercase}
+  nav a:hover{text-decoration:underline}
+  .hero{background:linear-gradient(180deg,#004d3c 0%,var(--green) 100%);color:#fff;
+    padding:3rem 1.5rem 3.5rem;text-align:center}
+  .hero .banner{max-width:44rem;width:100%;border-radius:.5rem;border:1px solid #ffffff33;
+    margin-bottom:1.25rem}
+  .hero h1{font-size:clamp(2.2rem,6vw,3.6rem);margin:.2em 0;letter-spacing:.02em}
+  .hero h1 .kip{color:var(--salmon)}
+  .hero p.tag{font-size:1.15rem;color:#e4efe9;max-width:42rem;margin:0 auto}
+  .hero .years{display:inline-block;margin-top:1.25rem;border:1px solid #ffffff55;
+    padding:.35rem 1.1rem;border-radius:999px;font-family:Verdana,Arial,sans-serif;
+    font-size:.8rem;letter-spacing:.18em;color:#efe9dc}
+  main{max-width:46rem;margin:0 auto;padding:0 1.25rem 3rem}
+  section{padding:2.5rem 0;border-bottom:2px solid var(--line)}
+  section:last-of-type{border-bottom:0}
+  h2{font-size:1.7rem;margin:0 0 1rem;color:var(--green);border-left:.35rem solid var(--salmon);
+    padding-left:.8rem}
+  h2 .num{color:var(--salmon);font-size:1rem;font-family:Verdana,Arial,sans-serif;
+    letter-spacing:.15em;display:block;margin-bottom:.4rem}
+  h3{font-size:1.2rem;margin:1.75rem 0 .5rem;color:var(--green2)}
+  p{margin:0 0 1.1rem}
+  .facts{background:var(--card);border:1px solid var(--line);border-left:.35rem solid var(--green);
+    border-radius:0 .5rem .5rem 0;padding:1.25rem 1.5rem;margin:1.5rem 0;
+    font-family:Verdana,Arial,sans-serif;font-size:.92rem}
+  .facts dt{font-weight:bold;color:var(--green);margin-top:.55rem}
+  .facts dt:first-child{margin-top:0}
+  .facts dd{margin:0;color:var(--muted)}
+  blockquote{border-left:4px solid var(--salmon);margin:1.75rem 0;padding:.5rem 1.25rem;
+    font-style:italic;background:var(--card);border-radius:0 .4rem .4rem 0}
+  blockquote .src{display:block;margin-top:.5rem;font-style:normal;font-size:.85rem;color:var(--muted);
+    font-family:Verdana,Arial,sans-serif}
+  ul.products{list-style:none;padding:0;display:grid;gap:.6rem;margin:1.25rem 0}
+  ul.products li{background:var(--card);border:1px solid var(--line);border-radius:.4rem;
+    padding:.7rem 1rem;font-family:Verdana,Arial,sans-serif;font-size:.93rem}
+  ul.products li b{color:var(--green)}
+  .timeline{list-style:none;padding:0;margin:1.25rem 0}
+  .timeline li{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;padding:.7rem 0;
+    border-bottom:1px dashed var(--line);font-family:Verdana,Arial,sans-serif;font-size:.92rem}
+  .timeline li:last-child{border-bottom:0}
+  .timeline .yr{font-weight:bold;color:var(--salmon);white-space:nowrap}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:.9rem;margin:1.25rem 0}
+  .gallery figure{margin:0;background:var(--card);border:1px solid var(--line);
+    border-radius:.4rem;overflow:hidden}
+  .gallery img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;background:#f2ecd9}
+  .gallery figcaption{padding:.6rem .8rem;font-family:Verdana,Arial,sans-serif;
+    font-size:.78rem;color:var(--muted)}
+  .sources{font-family:Verdana,Arial,sans-serif;font-size:.85rem;color:var(--muted)}
+  .sources li{margin-bottom:.45rem}
+  form.contact{background:var(--green);color:#efe9dc;border-radius:.6rem;
+    padding:2rem 1.75rem;margin-top:1.5rem;font-family:Verdana,Arial,sans-serif}
+  form.contact h3{color:#fff;margin-top:0}
+  form.contact label{display:block;font-size:.82rem;letter-spacing:.06em;
+    text-transform:uppercase;margin:1rem 0 .3rem;color:#d8e8e0}
+  form.contact input,form.contact textarea{width:100%;padding:.65rem .8rem;border:0;
+    border-radius:.35rem;font-size:1rem;font-family:Verdana,Arial,sans-serif}
+  form.contact textarea{min-height:8rem;resize:vertical}
+  form.contact button{margin-top:1.25rem;background:var(--salmon);color:#fff;border:0;
+    padding:.8rem 2rem;border-radius:.35rem;font-size:1rem;letter-spacing:.06em;cursor:pointer}
+  form.contact button:hover{background:#c65f3b}
+  form.contact .note{font-size:.78rem;color:#bcd0c6;margin-top:1rem}
+  footer{background:var(--green);color:#d8e8e0;text-align:center;padding:1.75rem 1rem;
+    font-family:Verdana,Arial,sans-serif;font-size:.8rem}
+  footer .stripe{display:block;height:.35rem;background:var(--salmon);margin:-1.75rem -1rem 1.5rem}
+  @media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.15rem}}
+  @media (max-width:760px){
+    header.site{flex-direction:column;align-items:flex-start;gap:.5rem;padding:.7rem 1rem}
+    nav{margin-left:0;gap:.55rem 1.1rem}
+    nav a{font-size:.72rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="brand"><img src="img/logo.gif" alt="KIP logo"><span>KIP <small>· Kelowna Industrial Plastics</small></span></div>
+  <nav>
+    <a href="#company">Company</a>
+    <a href="#westernstar">Western Star</a>
+    <a href="#products">Products</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#people">People</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#sources">Sources</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <img class="banner" src="img/plant.jpg" alt="The Kelowna Industrial Plastics plant building">
+  <div class="years">KELOWNA, BC &nbsp;·&nbsp; 1978 – ~2009</div>
+  <h1><span class="kip">KIP</span><br>Kelowna Industrial Plastics Ltd.</h1>
+  <p class="tag">The fiberglass shop on Sexsmith Road that built the hoods for
+  Western Star trucks — and boats, hot tubs, car bodies, gas-station signs,
+  and a Chrysler trailer along the way.</p>
+</div>
+
+<main>
+
+<section id="company">
+  <h2><span class="num">01</span>The Company</h2>
+  <p>Kelowna Industrial Plastics — KIP to everyone who knew it — was a fiberglass
+  and composites manufacturer in the Okanagan Valley. Founded in <b>1978</b> as a
+  private, Canadian-based company, it spent more than twenty-five years turning
+  resin and glass fiber into large, complex parts for industries across North America.</p>
+  <p>From its plant at <b>3015 Sexsmith Road</b>, a short drive from downtown Kelowna
+  and a few hours from the US border, KIP described itself as a “quality Canadian
+  manufacturer of custom molded composites.” It ran in-house engineering, tooling,
+  prototyping and production under one roof — mold shop, open molding, and
+  vacuum-assisted resin injection — and held ISO 9001:2000 certification from May 1999.</p>
+  <dl class="facts">
+    <dt>Full name</dt><dd>Kelowna Industrial Plastics (1995) Ltd. — known as KIP</dd>
+    <dt>Plant</dt><dd>3015 Sexsmith Road, Kelowna, BC V1X 7S7 · ~40,000 sq ft</dd>
+    <dt>Phone</dt><dd>(250) 765-4243 · Fax (250) 765-9709 · info@kipltd.com (as listed)</dd>
+    <dt>Also</dt><dd>A sister plant, KIP South Carolina Inc., ran in North Charleston, SC in the early 2000s</dd>
+    <dt>Website</dt><dd>www.kipltd.com — active in the early 2000s, long since offline; this site’s colors are taken from it</dd>
+    <dt>Leadership (per the archived site)</dt><dd>Stephen Anderson, President · Norman Cook, Vice President</dd>
+    <dt>Ownership</dt><dd>Stephen Anderson and Norman Cook — their fathers founded KIP in 1978 and passed the company on to their sons</dd>
+  </dl>
+  <p>KIP’s pitch to the world was simple: low-to-medium production volumes
+  (about 1 to 5,000 parts a year), economical tooling, and parts that came out of
+  the mold ready for paint — or painted to the customer’s own specification.</p>
+</section>
+
+<section id="westernstar">
+  <h2><span class="num">02</span>The Western Star Years</h2>
+  <p>KIP’s main business — and its claim to fame — was building fiberglass
+  <b>hoods for Western Star trucks</b>. Western Star assembled its heavy-duty
+  trucks in Kelowna from the late 1960s, and for decades KIP molded the big,
+  hand-finished hoods that went on them. In a 1999 interview, KIP summed up the
+  relationship:</p>
+  <blockquote>
+    “We make them and deliver them. Western Star paints them and assembles them.”
+    <span class="src">— KIP, quoted in press coverage, 1999</span>
+  </blockquote>
+  <p>The hoods were just the start. KIP also supplied fan shrouds, cowls, roof
+  caps, sleeper skirts, air-cleaner panels and fenders — everything delivered
+  sanded to a blemish-free 220-grit surface, ready for Western Star’s paint shop.</p>
+  <h3>The fire that stopped the line</h3>
+  <p>In <b>1988</b>, a major fire destroyed KIP’s plant. It was more than a local
+  disaster: Western Star was forced to cut production and lay workers off because
+  its hood supplier was gone — a measure of just how critical KIP was to the
+  truck line.</p>
+  <h3>The end of an era</h3>
+  <p>When Western Star’s Kelowna truck plant was announced for closure in 2001 and
+  shut in 2002, the supply chain it had anchored for decades came apart. KIP
+  carried on for several more years, still molding hoods for the Portland-built
+  trucks — until the hood contract went to a Vancouver company. Losing it is
+  what closed KIP, around <b>2009</b>.</p>
+</section>
+
+<section id="products">
+  <h2><span class="num">03</span>More Than Hoods</h2>
+  <p>Like many fiberglass shops of its era, KIP used the same molds, layup skills
+  and finishing capacity across a remarkable range of products:</p>
+  <ul class="products">
+    <li><b>Heavy truck</b> — Western Star hood assemblies, fan shrouds, cowls, roof caps, sleeper skirts, air-cleaner panels, fenders</li>
+    <li><b>Marine</b> — fiberglass boats under manufacturer code <b>ZIK</b> (outboards, open motorboats, jon boats), built from May 1983; from around 2003, KIP also briefly molded hull shells for Safara (Svfara) ski boats in Kelowna — a short-lived run of a year or two</li>
+    <li><b>Hot tubs &amp; spas</b> — fiberglass spa shells for Okanagan and Western Canadian hot-tub builders</li>
+    <li><b>Car bodies</b> — low-volume fiberglass bodies, including components for Dynasty battery-powered vehicles of Vancouver, BC from 2000</li>
+    <li><b>Signage</b> — a short-lived U.S. division built large fiberglass gas-station signs (Shell, Chevron and others); KIP also marketed its own “Easy Sign” modular sign board</li>
+    <li><b>Recreation</b> — a fiberglass trailer shell for the Chrysler Prowler (the complete trailer was built by Ajax Trailer Corp. of Warren, Michigan)</li>
+    <li><b>Industrial &amp; architectural</b> — RV components, architectural facias, tanks, covers and custom molded parts</li>
+  </ul>
+</section>
+
+<section id="timeline">
+  <h2><span class="num">04</span>Timeline</h2>
+  <ul class="timeline">
+    <li><span class="yr">1978</span><span>KIP founded in Kelowna, BC, as a fiberglass fabricator</span></li>
+    <li><span class="yr">May 1983</span><span>Registered as a boat manufacturer (manufacturer code ZIK); builds outboard, open motorboat and jon boats</span></li>
+    <li><span class="yr">1988</span><span>Fire destroys the KIP plant; Western Star cuts production and lays off workers</span></li>
+    <li><span class="yr">1995</span><span>Re-registered as Kelowna Industrial Plastics (1995) Ltd.</span></li>
+    <li><span class="yr">Dec 1997</span><span>Boat-building operation recorded as out of business in marine databases</span></li>
+    <li><span class="yr">May 1999</span><span>ISO 9001:2000 certification</span></li>
+    <li><span class="yr">2001–2002</span><span>Western Star announces closure of its Kelowna truck plant (2001) and shuts it (2002)</span></li>
+    <li><span class="yr">~2009</span><span>KIP closes permanently; another company takes over the Western Star hood supply</span></li>
+  </ul>
+</section>
+
+<section id="legacy">
+  <h2><span class="num">05</span>Spotting KIP’s Work Today</h2>
+  <p>KIP’s parts were rarely branded, but they’re still out there. Any boat with
+  a Hull Identification Number starting in <b>ZIK</b> was built by Kelowna
+  Industrial Plastics, sometime between 1983 and 1997. And the big fiberglass
+  hoods on older Kelowna-built Western Stars — 4800s, 4900s and their kin from
+  the ’80s and ’90s — passed through the Sexsmith Road plant, sanded to 220 grit
+  and ready for paint. And if you come across a Safara (Svfara) ski boat from
+  around 2003–2005, its hull shell likely came out of KIP’s molds — though only
+  for a year or two, as Safara never liked paying its bills.</p>
+  <p>If you worked at KIP, drove a truck with one of its hoods, floated in one of
+  its boats or soaked in one of its tubs, your memories are part of this story.
+  Use the form below to share them.</p>
+</section>
+
+<section id="people">
+  <h2><span class="num">06</span>The People</h2>
+  <p>KIP was a place you had to know someone to get on — and once you were on,
+  you tended to stay. Families worked the molds side by side for decades. Just
+  from the keeper of this site’s own circle:</p>
+  <ul class="products">
+    <li><b>The keeper’s dad</b> — 17 years</li>
+    <li><b>His uncle</b> — 25 years</li>
+    <li><b>Another uncle</b> — also put in his time there</li>
+    <li><b>The keeper himself</b> — 2 years</li>
+    <li><b>His brother</b> — 2 years</li>
+    <li><b>A friend’s brother</b> — 28 years</li>
+    <li><b>A friend and his twin sister</b> — 5 years</li>
+    <li><b>Another friend and his brother</b> — also worked there</li>
+  </ul>
+  <p>That’s one family tree’s worth of fiberglass dust. If you or yours worked
+  at KIP, add your years to the story through the contact form below.</p>
+</section>
+
+<section id="gallery">
+  <h2><span class="num">07</span>Gallery</h2>
+  <p>The images below are the survivors — graphics recovered from the archived
+  kipltd.com. Searches of Kelowna newspaper sites and museum archives turned up
+  no photos of the plant, the 1988 fire, or the workforce, so these are all
+  there is for now — and any you share would be a real find.</p>
+  <div class="gallery">
+    <figure>
+      <img src="img/collage.gif" alt="KIP homepage collage: fiberglass trailer, Dynasty car, Chevron sign, wind turbine and semi-truck">
+      <figcaption>KIP’s own homepage collage — trailer, Dynasty car, Chevron sign, wind turbine, semi</figcaption>
+    </figure>
+    <figure>
+      <img src="img/name.gif" alt="KIP header banner showing a white semi-truck">
+      <figcaption>The kipltd.com header banner — a white semi on green</figcaption>
+    </figure>
+    <figure>
+      <img src="img/truck.jpg" alt="White semi-tractor on a road at dusk">
+      <figcaption>From the old site’s photo files — a white tractor at dusk</figcaption>
+    </figure>
+    <figure>
+      <img src="img/truck2.jpg" alt="Dark semi-truck with trailer in a grassy field">
+      <figcaption>From the old site’s photo files — a working truck in a field</figcaption>
+    </figure>
+    <figure>
+      <img src="img/truck-red.gif" alt="Red semi-truck illustration">
+      <figcaption>A red semi from the kipltd.com image library</figcaption>
+    </figure>
+    <figure>
+      <img src="img/renegade.jpg" alt="Red three-wheeled motorcycle trike">
+      <figcaption>The “Renegade” trike — fiberglass bodywork, from the old site</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="sources">
+  <h2><span class="num">08</span>Sources</h2>
+  <ul class="sources">
+    <li>kipltd.com — archived snapshots, Jan 2001 to Oct 2006 (Internet Archive / Wayback Machine); images and color palette recovered from the same archive</li>
+    <li>US Coast Guard / boat-history manufacturer records — Kelowna Industrial Plastics, MIC ZIK (in business as a boat builder 1983–1997)</li>
+    <li>1999 press coverage — “We make them and deliver them. Western Star paints them and assembles them.”</li>
+    <li>1988 newspaper reporting — fire at Kelowna Industrial Plastics; Western Star production cuts and layoffs</li>
+    <li>Truck industry histories — Western Star’s Kelowna plant (1967–2002); closure announced 2001</li>
+    <li>Business directories — Kelowna Industrial Plastics (1995) Ltd., 3015 Sexsmith Rd, Kelowna BC V1X 7S7</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2><span class="num">09</span>Say Hello</h2>
+  <p>Worked at KIP, drove a Western Star with one of its hoods, or have photos
+  and stories to share? Drop a line below — messages come straight to the
+  site’s keeper.</p>
+
+  <!--
+    CONTACT FORM: wired to Dave's reusable Formspree endpoint
+    (https://formspree.io/f/mdeaojky), same as the Brenda Mines and
+    Northernlite tribute sites. Fields: name, _replyto, message, _subject.
+  -->
+  <form class="contact" action="https://formspree.io/f/mdeaojky" method="POST">
+    <h3>Contact</h3>
+    <input type="hidden" name="_subject" value="New message from the Kelowna Industrial Plastics tribute site">
+    <label for="c-name">Your name</label>
+    <input id="c-name" name="name" type="text" required autocomplete="name">
+    <label for="c-email">Your email</label>
+    <input id="c-email" name="_replyto" type="email" required autocomplete="email">
+    <label for="c-msg">Message</label>
+    <textarea id="c-msg" name="message" required></textarea>
+    <button type="submit">Send message</button>
+    <p class="note">Your email stays private — it’s only used so a reply is possible.</p>
+  </form>
+</section>
+
+</main>
+
+<footer>
+  <span class="stripe"></span>
+  A fan-made tribute to Kelowna Industrial Plastics Ltd. (1978–~2009), Kelowna, BC.<br>
+  Built with memories, archives and fiberglass dust.
+</footer>
+
+</body>
+</html>
